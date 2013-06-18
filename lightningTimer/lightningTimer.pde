@@ -4,6 +4,7 @@ PFont f64;
 PFont f128;
 
 void setup() {
+  frameRate(4);
   size(400, 400);
   f128 = createFont("Arial", 128, true); 
   f64 = createFont("Arial", 64, true); 
