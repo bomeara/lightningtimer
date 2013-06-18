@@ -5,7 +5,8 @@ PFont f128;
 
 void setup() {
   frameRate(4);
-  size(400, 400);
+  //size(400, 400);
+  size(displayWidth, displayHeight);
   f128 = createFont("Arial", 128, true); 
   f64 = createFont("Arial", 64, true); 
   f32 = createFont("Arial", 32, true); 
@@ -16,6 +17,9 @@ void setup() {
 
 
 void draw() {
+  fill(0, 0, 0);
+  textAlign(CENTER);
+
   if (minute()%5<3) {
     background(91, 250, 81);
   } 
@@ -24,13 +28,13 @@ void draw() {
   }
   else {
     background(203, 4, 4);
+      textFont(f64);       
+    text("Set up for next talk", width/2, 300);
+
   }
 
   textFont(f128);       
-  fill(0, 0, 0);
-  //stroke(175);
-  textAlign(CENTER);
-  int secondsLeft = 4*60 - ( 60* (minute()%5) + second());
+   int secondsLeft = 4*60 - ( 60* (minute()%5) + second());
   String[] timeString = new String[2];
   //timeString[0] = nf(minute()%5, 1);
   int minutesLeft = floor(secondsLeft/60.0);
@@ -40,7 +44,7 @@ void draw() {
   timeString[1] = nf(abs(minutesLeft * 60 - secondsLeft), 2);
   if ( minutesLeft < 0) {
     timeString[0] = "0";
-    timeString[1] = nf(abs(secondsLeft), 2);
+    timeString[1] = nf(60-abs(secondsLeft), 2);
   }
   text(join(timeString, ':'), width/2, 100);
 }
