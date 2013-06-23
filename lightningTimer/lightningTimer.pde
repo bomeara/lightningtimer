@@ -24,7 +24,7 @@ int offset = 0;
 
 void setup() {
   frameRate(20);
-  //size(400, 400);
+  //size(1200, 900);
   size(displayWidth, displayHeight);
   f128 = createFont("Arial", 128, true); 
   f96 = createFont("Arial", 96, true); 
@@ -32,8 +32,7 @@ void setup() {
   f64 = createFont("Arial", 64, true); 
   f32 = createFont("Arial", 32, true); 
   f16 = createFont("Arial", 16, true); 
-  table = loadTable("data/LightningTalksSchedule.csv", "header, csv");
-  println("loaded");
+  table = loadTable("http://brianomeara.info/sites/default/files/LightningTalksSchedule.csv", "header, csv");
 }
 
 
@@ -77,7 +76,6 @@ void draw() {
   }
   text(join(timeString, ':'), width/2, height/5);
   textFont(f16);       
-  String currenthour = "" + hour();
   int currentTimeInt = (60 * hour()) + minute();
   text("Running script for room " + room + ", type a or b to switch to appropriate room", width/2, height-50);
   for (TableRow row : table.matchRows(room, "Room")) {
@@ -97,4 +95,3 @@ void draw() {
     }
   }
 }
-
