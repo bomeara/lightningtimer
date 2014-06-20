@@ -1,4 +1,4 @@
-//Created by Brian O'Meara for Evolution 2013 Lightning Talks
+  //Created by Brian O'Meara for Evolution 2013 Lightning Talks
 //   This program is free software: you can redistribute it and/or modify
 //    it under the terms of the GNU General Public License as published by
 //    the Free Software Foundation, either version 3 of the License, or
@@ -19,7 +19,7 @@ PFont f128;
 PFont f200;
 PFont f96;
 Table table;
-String room = "A";
+String day = "3";
 int offset = 0;
 
 void setup() {
@@ -32,18 +32,19 @@ void setup() {
   f64 = createFont("Arial", 64, true); 
   f32 = createFont("Arial", 32, true); 
   f16 = createFont("Arial", 16, true); 
-  table = loadTable("http://brianomeara.info/sites/default/files/LightningTalksSchedule.csv", "header, csv");
+//  table = loadTable("http://brianomeara.info/sites/default/files/LightningTalksSchedule2014.csv", "header, csv");
+  table = loadTable("LightningTalksSchedule2014.csv", "header, csv");
 }
 
 
 
 void draw() {
   if (keyPressed) {
-    if (key == 'a' || key == 'A') {
-      room = "A";
+    if (key == '3') {
+      day = "3";
     }
-    if (key == 'b' || key == 'B') {
-      room = "B";
+    if (key == '4') {
+      day = "4";
     }
   }
   fill(0, 0, 0);
@@ -77,20 +78,20 @@ void draw() {
   text(join(timeString, ':'), width/2, height/5);
   textFont(f16);       
   int currentTimeInt = (60 * hour()) + minute();
-  text("Running script for room " + room + ", type a or b to switch to appropriate room", width/2, height-50);
-  for (TableRow row : table.matchRows(room, "Room")) {
+  text("Running script for day " + day + ", type 3 or 4 to switch to appropriate day (3=Monday, 4=Tuesday)", width/2, height-50);
+  for (TableRow row : table.matchRows(day, "Day")) {
     int rowCurrentTimeInt = (60*int(row.getString("Hour"))) + int(row.getString("Minute"));
     if ( (currentTimeInt - rowCurrentTimeInt < 4) && (currentTimeInt - rowCurrentTimeInt >= 0)) {
-      textFont(f96);       
-      text("Now: " + row.getString("Presenter") +  " " + row.getString("Hour") + ":" + row.getString("Minute"), width/2, 2*height/5);
+      textFont(f64);       
+      text("Now: " + row.getString("Id") + " " + row.getString("Presenter") +  " " + row.getString("Hour") + ":" + row.getString("Minute"), width/2, 2*height/5);
     }
     if ( (rowCurrentTimeInt - currentTimeInt <= 5) && (rowCurrentTimeInt - currentTimeInt > 0)) {
-      textFont(f96);       
-      text("Next: " + row.getString("Presenter") +  " " + row.getString("Hour") + ":" + row.getString("Minute"), width/2, 3*height/5);
+      textFont(f64);       
+      text("Next: " + row.getString("Id") + " " + row.getString("Presenter") +  " " + row.getString("Hour") + ":" + row.getString("Minute"), width/2, 3*height/5);
     }
     if ((rowCurrentTimeInt - currentTimeInt > 0) & (offset < 4) && (rowCurrentTimeInt - currentTimeInt > 5)) {
       textFont(f32);       
-      text("Then: " + row.getString("Presenter") +  " " + row.getString("Hour") + ":" + row.getString("Minute"), width/2, 4*height/5 + 40*offset);
+      text("Then: " + row.getString("Id") + " " + row.getString("Presenter") +  " " + row.getString("Hour") + ":" + row.getString("Minute"), width/2, 4*height/5 + 40*offset);
       offset=offset+1;
     }
   }
