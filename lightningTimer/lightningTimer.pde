@@ -19,7 +19,7 @@ PFont f128;
 PFont f200;
 PFont f96;
 Table table;
-String day = "3";
+String section = "A";
 int offset = 0;
 
 void setup() {
@@ -32,19 +32,22 @@ void setup() {
   f64 = createFont("Arial", 64, true); 
   f32 = createFont("Arial", 32, true); 
   f16 = createFont("Arial", 16, true); 
-//  table = loadTable("http://brianomeara.info/sites/default/files/LightningTalksSchedule2014.csv", "header, csv");
-  table = loadTable("LightningTalksSchedule2014.csv", "header, csv");
+  table = loadTable("http://www.weebly.com/uploads/3/1/9/3/31930665/ssblightning.tsv", "header, tsv");
+ // table = loadTable("LightningTalksSchedule2014.csv", "header, csv");
 }
 
 
 
 void draw() {
   if (keyPressed) {
-    if (key == '3') {
-      day = "3";
+    if (key == 'a' || key=='A') {
+      section = "A";
     }
-    if (key == '4') {
-      day = "4";
+    if (key == 'b' || key=='B') {
+      section = "B";
+    }
+    if (key == 'c' || key=='C') {
+      section = "C";
     }
   }
   fill(0, 0, 0);
@@ -78,20 +81,20 @@ void draw() {
   text(join(timeString, ':'), width/2, height/5);
   textFont(f16);       
   int currentTimeInt = (60 * hour()) + minute();
-  text("Running script for day " + day + ", type 3 or 4 to switch to appropriate day (3=Monday, 4=Tuesday)", width/2, height-50);
-  for (TableRow row : table.matchRows(day, "Day")) {
+  text("Running script for section " + section + ", type A, B, or C to switch to appropriate section", width/2, height-50);
+  for (TableRow row : table.matchRows(section, "Section")) {
     int rowCurrentTimeInt = (60*int(row.getString("Hour"))) + int(row.getString("Minute"));
     if ( (currentTimeInt - rowCurrentTimeInt < 4) && (currentTimeInt - rowCurrentTimeInt >= 0)) {
       textFont(f64);       
-      text("Now: " + row.getString("Id") + " " + row.getString("Presenter") +  " " + row.getString("Hour") + ":" + row.getString("Minute"), width/2, 2*height/5);
+      text("Now: " + row.getString("Presenter") +  " " + row.getString("Time") , width/2, 2*height/5);
     }
     if ( (rowCurrentTimeInt - currentTimeInt <= 5) && (rowCurrentTimeInt - currentTimeInt > 0)) {
       textFont(f64);       
-      text("Next: " + row.getString("Id") + " " + row.getString("Presenter") +  " " + row.getString("Hour") + ":" + row.getString("Minute"), width/2, 3*height/5);
+      text("Next: " + row.getString("Presenter") +  " " + row.getString("Time") , width/2, 3*height/5);
     }
     if ((rowCurrentTimeInt - currentTimeInt > 0) & (offset < 4) && (rowCurrentTimeInt - currentTimeInt > 5)) {
       textFont(f32);       
-      text("Then: " + row.getString("Id") + " " + row.getString("Presenter") +  " " + row.getString("Hour") + ":" + row.getString("Minute"), width/2, 4*height/5 + 40*offset);
+      text("Then: " + row.getString("Presenter") +  " " + row.getString("Time") , width/2, 4*height/5 + 40*offset);
       offset=offset+1;
     }
   }
