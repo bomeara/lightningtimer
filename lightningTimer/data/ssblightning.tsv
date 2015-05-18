@@ -1,0 +1,55 @@
+Section	Hour	Minute	Time	Category	Presenter	Title
+A	13	0	1:00	Next gen	Dan Gates	A genomic approach to resolving the backbone of Iochroma (Solanaceae)
+A	13	5	1:05	Next gen	Richard Hodel	More than SNPs: mining chloroplast sequences from a RAD-Seq data set.
+A	13	10	1:10	Next gen	Oscar Vargas	Genome Skimming Elucidates the Phylogeny of the Recent Diplostephium Radiation on the Andes and Uncovers Two New Genera
+A	13	15	1:15	Next gen	Liz Alter	Phylogenetics of river cichlids using ddRAD data
+A	13	20	1:20	Next gen	David Salazar-Valenzuela	Phylogenomics of the ultimate pitviper (Bothrops asper), an almost-model organism
+A	13	25	1:25	Next gen	Elizabeth Wade	Resolving the cicada genus Kikihia phylogeny using hybrid enrichment data
+A	13	30	1:30	Next gen	Matthew Miller	ultraconserved elements at the tips: using UCEs to explore secondary contact in a Panamanian avian suture zone
+A	13	35	1:35	Next gen	Lukas Musher	Untangling phylogenetic relationships in the Neotropical Becards (Pachyramphus)
+A	13	40	1:40	Next gen	Felipe Zapata	Better integrating the components of phylogenetic analyses
+A	13	45	1:45	Next gen	Gregg Thomas	Accounting for error in next generation sequence data
+A	13	50	1:50	Next gen	Rachel Schwartz	Rapid identification of phylogenetically informative data from next-gen sequencing reads
+A	13	55	1:55	Next gen	Kevin Liu	Stochastic Models and Algorithms for Large-scale Comparative Genomics under Complex Evolutionary Scenarios
+A	14	0	2:00	Next gen	Jeremy Brown	The effect of sequencing strategy on the amount and quality of phylogenetic information
+A	14	5	2:05	Next gen	Jason Macrander	Transcriptomics with a scalpel, not a hatchet.
+A	14	10	2:10	Next gen	Gregory L. Wheeler	Tuning knobs, transcriptomes, and functional microsatellites
+A	14	15	2:15	Systematics	Alex Pyron	Total-Evidence Timescales in Amphisbaenia
+A	14	20	2:20	Tree inference	Joseph Walker	Simulating the issues involved with using mitochondrial data to resolve mammal phylogenies
+A	14	25	2:25	Tree inference	Hernan Vazquez Miranda	Comparing trees based on structural metrics from phylogenomic data
+A	14	30	2:30	Tree inference	Deren Eaton	Efficient and adaptive search of quartet tree space for phylogenomics
+A	14	35	2:35	Tree inference	Luay Nakhleh	Inference of reticulate evolutionary histories
+A	14	40	2:40	Tree inference	Ruth Davidson	Species Tree Inference in the Presence of HGT and ILS
+A	14	45	2:45	Tree inference	Mark Miller	The CIPRES RESTful services for Tree inference on large compute resources
+B	13	0	1:00	Biogeography	Guanyang Zhang	Biogeography of Caribbean weevils highlights the importance of founder-event speciation
+B	13	5	1:05	Diversification	Paola Pulido-Santacruz	Extinction as a key driver of avian latitudinal diversity gradients
+B	13	10	1:10	Diversification	Lillian hancock	Parakeelya, the amazing Australian radiation you have never heard about
+B	13	15	1:15	Gene tree species tree	Fabio Kuriki Mendes	Apparently accelerated rates of substitution can be caused by gene tree discordance
+B	13	20	1:20	Gene tree species tree	Yuan Tian	Distribution of gene tree histories under coalescent model with gene flow
+B	13	25	1:25	Morphometrics	Jonathan Chang	Crowdsourced morphometrics for large-scale analysis of phenotypic data
+B	13	30	1:30	Phylogeography	Pascal Title	Landscape genetics of Australian skinks
+B	13	35	1:35	Phylogeography	Brian T. Smith	Large-scale phylogeography of New World Birds
+B	13	40	1:40	Phylogeography	Arianna Kuhn	Phylogeography of an endemic group of Malagasy snakes
+B	13	45	1:45	Phylogeography	Karen Ober	Phylogeography of trogolobitic beeetles
+B	13	50	1:50	Species delim	Melissa DeBiasse	Discordance between morphological and molecular species boundaries among Caribbean species of the reef sponge Callyspongia
+B	13	55	1:55	Species delim	Vijay Ramesh	Identifying cryptic lineages within an endemic frog genus (Indirana) in the Western Ghats
+B	14	0	2:00	Species delim	Ron DeBry	Species delimitation in Ravinia
+B	14	5	2:05	Species delim	Ariadna Morales	Species delimitation of the westernlong-eared Myotis Bats using approximated likelihood
+B	14	10	2:10	Species delim	Priscilla Tucker	The role of genome functional organization in shaping the species boundary
+B	14	15	2:15	Trait evolution	Shauna Price	Ecological opportunity triggers a congruent burst of lineage and phenotypicdiversification in a Neotropical ant lineage
+B	14	20	2:20	Trait evolution	Paul Larson	Evolution of brooding in Sea Anemones
+B	14	25	2:25	Trait evolution	Jennifer Hodge	Sexual selection and diversification of coral reef fishes
+B	14	30	2:30	Trait evolution	Nathan Upham	Testing for adaptive radiation and ecological constraint in a major lineage of rodents
+B	14	35	2:35	Trait evolution	Caroline Parins-Fukuchi	Using phylogenetics to understand reproductive evolution in primates
+B	14	40	2:40	Taxonomy	Liz Miller	Equivalency of genera across the Tree of Life?
+C	13	0	1:00	Comparative methods	Eric Goolsby	Comparative methods for function-valued and other high-dimensional traits
+C	13	5	1:05	Comparative methods	Jan Schnitzler	Integrating fossil and molecular data to study modes and rates of trait evolution.
+C	13	10	1:10	Comparative methods	Rosana Zenil-Ferguson	New Mathematical Model for Ploidy Evolution and Diploidization
+C	13	15	1:15	Comparative methods	Dean Adams	Permutation tests for phylogenetic regression: What you shuffle matters
+C	13	20	1:20	Comparative methods	Julienne Ng	Teasing apart tippiness
+C	13	25	1:25	Tree inference	Orlando Schwery	MonoPhy: A simple R function to find and visualize monophyly issues
+C	13	30	1:30	Tree inference	Nicholas Matzke	BEASTmasteR: Tip-dating with fossils in Beast2, using R to convert NEXUS data files to XML input
+C	13	35	1:35	Tree inference	Ruchi Chaudhary	Constructing and Employing Tree Alignment Graphs for Phylogenetic Synthesis
+C	13	40	1:40	Tree inference	James Degnan	Estimating rooted species trees from splits
+C	13	45	1:45	Tree inference	Joanna Wolfe	Methods for dating trees in the absence of fossils
+C	13	50	1:50	Tree inference	Cody Hinchliff	Software from the Open Tree of Life

@@ -32,13 +32,15 @@ void setup() {
   f64 = createFont("Arial", 64, true); 
   f32 = createFont("Arial", 32, true); 
   f16 = createFont("Arial", 16, true); 
-  table = loadTable("http://www.weebly.com/uploads/3/1/9/3/31930665/ssblightning.tsv", "header, tsv");
+  table = loadTable("ssblightning.tsv", "header, tsv");
+//  table = loadTable("http://www.weebly.com/uploads/3/1/9/3/31930665/ssblightning.tsv", "header, tsv");
  // table = loadTable("LightningTalksSchedule2014.csv", "header, csv");
 }
 
 
 
 void draw() {
+
   if (keyPressed) {
     if (key == 'a' || key=='A') {
       section = "A";
@@ -82,6 +84,7 @@ void draw() {
   textFont(f16);       
   int currentTimeInt = (60 * hour()) + minute();
   text("Running script for section " + section + ", type A, B, or C to switch to appropriate section", width/2, height-50);
+
   for (TableRow row : table.matchRows(section, "Section")) {
     int rowCurrentTimeInt = (60*int(row.getString("Hour"))) + int(row.getString("Minute"));
     if ( (currentTimeInt - rowCurrentTimeInt < 4) && (currentTimeInt - rowCurrentTimeInt >= 0)) {
